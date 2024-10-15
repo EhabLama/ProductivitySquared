@@ -1,0 +1,33 @@
+Imagine you are a developer who has been asked to work on a SharePoint Online Intranet project. Your task is to create a custom component (also referred to as 'webparts') for their Intranet.
+
+ 
+
+Please use the SharePoint Framework (SPFx) to create a new custom web part. The webpart should retrieve data from other services as part the functionality - you could use: 
+
+Any API from the Transport for London website (the APIs can be found here: https://api.tfl.gov.uk) OR;  
+The Microsoft Graph API to interact with data outside of SharePoint (e.g. Outlook, OneDrive, AAD) OR;  
+The SharePoint REST API to interact with SharePoint data  
+ The web part should be written using React JS or Angular JS.  
+
+  
+
+We’ll be looking for the following things: 
+
+How you were able to pick up unfamiliar technology (assuming you don't have any SPFx development experience)
+How well your code is written  
+How cool it looks  
+How useful the component might be  
+That it deploys and works!  
+ Bonus points for integrating Microsoft's design system Fluent UI, or any other interesting libraries. 
+
+  
+
+Please provide us with the source code as well as a packaged .sppkg file so that we can install the web part in our own test environment. 
+
+ 
+
+If any additional steps are required to install the web part please document them briefly for us. 
+
+  
+
+This is not meant to be an overly laborious task – we hope that this takes 4 or perhaps 6 hours – and we will be taking this short timeframe into consideration when reviewing your work. 
