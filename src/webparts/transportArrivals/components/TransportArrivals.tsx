@@ -32,6 +32,9 @@ export default class TransportArrivals extends React.Component<ITransportArrival
     };
   }
 
+  // Fetch user events from Microsoft Graph API. 
+  /*  Personal Note: this was one of the most painful things I had to do in my last 9 years of programming, missing SharePoint Online
+      Client Extensibility Web Application Principal client IDs are real and they can hurt you. */
   private fetchUserEvents = async (): Promise<void> => {
     try {
       const client: MSGraphClientV3 = await this.props.context.msGraphClientFactory.getClient('3');
@@ -44,6 +47,7 @@ export default class TransportArrivals extends React.Component<ITransportArrival
     }
   };
 
+  // Fetch available transport locations from the API
   private fetchLocations = async (): Promise<void> => {
     this.setState({ loading: true });
     try {
@@ -55,10 +59,12 @@ export default class TransportArrivals extends React.Component<ITransportArrival
     }
   };
 
+  // Fetch transport arrivals for the selected location
   private fetchArrivals = async (location: string): Promise<void> => {
     this.setState({ loading: true, arrivals: [] });
     try {
       const transportEvents = await fetchArrivals(location);
+      // Update state with new arrivals and merge with calendar events
       this.setState((prevState) => ({
         arrivals: transportEvents,
         loading: false,

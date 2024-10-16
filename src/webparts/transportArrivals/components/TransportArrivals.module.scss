@@ -12,12 +12,14 @@
 
 @media (max-width: 768px) {
   .dropdown {
+    // Ensure dropdown is full width on smaller screens
     width: 100% !important;
   }
 }
 
 @media (min-width: 769px) {
   .dropdown {
+    // Set a fixed width for dropdown on larger screens
     width: 400px !important;
   }
 }
