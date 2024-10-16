@@ -29,6 +29,24 @@ This SPFx web part integrates Transport for London and Microsoft Graph APIs to d
   - **npm install**: Installs the necessary packages.
   - **gulp serve**: Serves the web part locally for development.
 
+## Building and Bundling the Project
+
+To generate the `.sppkg` file for deployment:
+
+1. **Build the Solution:**
+   - Open a terminal in the root of your SPFx project.
+   - Run the following command to build the solution:
+     ```bash
+     gulp bundle --ship
+     ```
+
+2. **Package the Solution:**
+   - After the build is complete, package the solution using:
+     ```bash
+     gulp package-solution --ship
+     ```
+   - This will generate a `.sppkg` file in the `sharepoint/solution` directory.
+
 ## Configuration
 
 ### SharePoint Admin Center
@@ -41,6 +59,7 @@ This SPFx web part integrates Transport for London and Microsoft Graph APIs to d
 - Register an Azure AD app for Microsoft Graph API access.
 - Configure application permissions for Calendar.Read and other necessary scopes.
 - Note the client ID and secret for use in the SPFx solution.
+- If the webpart fails to fetch user information such as existing calendar events, you might need to generate a client secret for SharePoint Online Client Extensibility Web Application Principal under certificates & secrets
 
 ## Features
 

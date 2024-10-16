@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "personal-productivity-tracker-client-side-solution",
+    "name": "transit-squared-client-side-solution",
     "id": "bf9f3e85-e832-446e-afec-96e0b9c40969",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
@@ -16,10 +16,10 @@
     },
     "metadata": {
       "shortDescription": {
-        "default": "Personal Productivity Tracker description"
+        "default": "TransitSquared description"
       },
       "longDescription": {
-        "default": "Personal Productivity Tracker description"
+        "default": "TransitSquared description"
       },
       "screenshotPaths": [],
       "videoUrl": "",
@@ -27,8 +27,8 @@
     },
     "features": [
       {
-        "title": "personal-productivity-tracker Feature",
-        "description": "The feature that activates elements of the personal-productivity-tracker solution.",
+        "title": "transitSquared Web Part",
+        "description": "The feature that activates elements of the transitSquared solution.",
         "id": "8471ed50-98b0-4e18-b06d-71118f69d79c",
         "version": "1.0.0.0"
       }
@@ -45,6 +45,6 @@
     ]
   },
   "paths": {
-    "zippedPackage": "solution/personal-productivity-tracker.sppkg"
+    "zippedPackage": "solution/transitSquared.sppkg"
   }
 }
