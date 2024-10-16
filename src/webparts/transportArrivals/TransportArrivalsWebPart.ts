@@ -2,35 +2,35 @@ import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
 import {
-  type IPropertyPaneConfiguration,
+  IPropertyPaneConfiguration,
   PropertyPaneTextField
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
-import * as strings from 'ProductivityOverviewWebPartStrings';
-import ProductivityOverview from './components/ProductivityOverview';
-import { IProductivityOverviewProps } from './components/IProductivityOverviewProps';
+import * as strings from 'TransportArrivalsWebPartStrings';
+import TransportArrivals from './components/TransportArrivals';
+import { ITransportArrivalsProps } from './components/ITransportArrivalsProps';
 
-export interface IProductivityOverviewWebPartProps {
+export interface ITransportArrivalsWebPartProps {
   description: string;
 }
 
-export default class ProductivityOverviewWebPart extends BaseClientSideWebPart<IProductivityOverviewWebPartProps> {
+export default class TransportArrivalsWebPart extends BaseClientSideWebPart<ITransportArrivalsWebPartProps> {
 
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';
 
   public render(): void {
-    const element: React.ReactElement<IProductivityOverviewProps> = React.createElement(
-      ProductivityOverview,
+    const element: React.ReactElement<ITransportArrivalsProps> = React.createElement(
+      TransportArrivals,
       {
         context: this.context,
-        userDisplayName: this.context.pageContext.user.displayName,
         description: this.properties.description,
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
-        hasTeamsContext: !!this.context.sdks.microsoftTeams
+        hasTeamsContext: !!this.context.sdks.microsoftTeams,
+        userDisplayName: this.context.pageContext.user.displayName
       }
     );
 
@@ -42,8 +42,6 @@ export default class ProductivityOverviewWebPart extends BaseClientSideWebPart<I
       this._environmentMessage = message;
     });
   }
-
-
 
   private _getEnvironmentMessage(): Promise<string> {
     if (!!this.context.sdks.microsoftTeams) { // running in Teams, office.com or Outlook

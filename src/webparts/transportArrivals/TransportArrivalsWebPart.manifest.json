@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-  "id": "21c8724d-386a-4865-95c3-5bfef15f6982",
-  "alias": "ProductivityOverviewWebPart",
+  "id": "64ca07f8-647b-422f-b0bc-20596d90f167",
+  "alias": "TransportArrivalsWebPart",
   "componentType": "WebPart",
 
   // The "*" signifies that the version should be taken from the package.json
@@ -18,11 +18,11 @@
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
     "group": { "default": "Advanced" },
-    "title": { "default": "productivity-overview" },
-    "description": { "default": "productivity-overview description" },
+    "title": { "default": "TransportArrivals" },
+    "description": { "default": "TransportArrivals description" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "productivity-overview"
+      "description": "TransportArrivals"
     }
   }]
 }

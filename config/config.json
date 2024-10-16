@@ -9,10 +9,19 @@
           "manifest": "./src/webparts/productivityOverview/ProductivityOverviewWebPart.manifest.json"
         }
       ]
+    },
+    "transport-arrivals-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/transportArrivals/TransportArrivalsWebPart.js",
+          "manifest": "./src/webparts/transportArrivals/TransportArrivalsWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "ProductivityOverviewWebPartStrings": "lib/webparts/productivityOverview/loc/{locale}.js"
+    "ProductivityOverviewWebPartStrings": "lib/webparts/productivityOverview/loc/{locale}.js",
+    "TransportArrivalsWebPartStrings": "lib/webparts/transportArrivals/loc/{locale}.js"
   }
 }

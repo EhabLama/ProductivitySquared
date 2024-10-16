@@ -1,4 +1,4 @@
-declare interface IProductivityOverviewWebPartStrings {
+declare interface ITransportArrivalsWebPartStrings {
   PropertyPaneDescription: string;
   BasicGroupName: string;
   DescriptionFieldLabel: string;
@@ -13,7 +13,7 @@ declare interface IProductivityOverviewWebPartStrings {
   UnknownEnvironment: string;
 }
 
-declare module 'ProductivityOverviewWebPartStrings' {
-  const strings: IProductivityOverviewWebPartStrings;
+declare module 'TransportArrivalsWebPartStrings' {
+  const strings: ITransportArrivalsWebPartStrings;
   export = strings;
 }

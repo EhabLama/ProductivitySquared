@@ -1,6 +1,6 @@
 @import '~@fluentui/react/dist/sass/References.scss';
 
-.productivityOverview {
+.transportArrivals {
   overflow: hidden;
   padding: 1em;
   color: "[theme:bodyText, default: #323130]";
@@ -10,10 +10,16 @@
   }
 }
 
-.emailItem {
-  margin-bottom: 10px;
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
+@media (max-width: 768px) {
+  .dropdown {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .dropdown {
+    width: 400px !important;
+  }
 }
 
 .welcome {
